@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./TravelBackend/Travel-Springboot
-          file: ./Travel-Springboot/backend.Dockerfile
+          file: ./TravelBackend/Travel-Springboot/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab10-backend:latest
 
@@ -35,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./TravelFrontend/Travel-React
-          file: ./Travel-React/frontend.Dockerfile
+          file: ./TravelFrontend/Travel-React/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/lab10-frontend:latest
